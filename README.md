@@ -1,11 +1,11 @@
 # unfolded-map-snippets
-VScode Snippets extension for Unfolded Map and Data SDKs.
+Unfolded Map and Data SDK VSCode snippets.
 
-![Unfolded Snippets in Snippets Viewer Tree View](https://raw.githubusercontent.com/RandomFractals/vscode-extension-snippets/main/docs/images/unfolded-snippets.png)
+![Unfolded Snippets in Snippets Viewer Tree View](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-snippets.png)
 
 # Scope
 
-This extension attempts to address most frequently asked questions for the unofficial [VS Code dev community slack](https://aka.ms/vscode-dev-community) and provide vscode extension code snippets that go beyond [vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples) and use best practices and guidelines for creating vscode extensions, custom editors, webviews, tree views, custom terminals, etc.
+This extension provides custom HTML, CSS, JavaScript and Python code snippets for Unfolded Map and Data SDKs.
 
 # Usage
 
