@@ -1,6 +1,6 @@
 {
   "name": "unfolded-snippets",
-  "displayName": "Unfolded VSCode Snippets",
+  "displayName": "Unfolded Snippets",
   "description": "VSCode Snippets for Unfolded Map and Data SDKs",
   "version": "1.0.0",
   "engines": {

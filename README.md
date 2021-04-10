@@ -1,5 +1,5 @@
 # unfolded-map-snippets
-VScode Snippets extension for Unfolded Mapd and Data SDKs.
+VScode Snippets extension for Unfolded Map and Data SDKs.
 
 ![Unfolded Snippets in Snippets Viewer Tree View](https://raw.githubusercontent.com/RandomFractals/vscode-extension-snippets/main/docs/images/unfolded-snippets.png)
 
