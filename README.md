@@ -5,13 +5,13 @@
 
 # Scope
 
-This extension provides custom [HTML](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/html.code-snippets), [CSS](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/css.code-snippets), [JavaScript](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/javascript.code-snippets) and [Python](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/python.code-snippets) code snippets for the [Unfolded Map](https://docs.unfolded.ai/map-sdk) and [Data SDK](https://docs.unfolded.ai/data-sdk).
+This extension provides custom [HTML](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/html.code-snippets), [CSS](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/css.code-snippets), [JavaScript](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/javascript.code-snippets) and [Python](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/python.code-snippets) code snippets ✂️ for the [Unfolded Map](https://docs.unfolded.ai/map-sdk) and [Data SDK](https://docs.unfolded.ai/data-sdk).
 
 Use [Unfolded Studio](https://docs.unfolded.ai/studio) to create your [unfolded.ai](https://www.unfolded.ai) maps 🗺️.
 
-Unfolded Snippets ✂️ extension provides code templates you can use to create custom Unfolded map 🗺️ html templates, and Python scripts to manage data uploaded to [Unfolded Studio](https://docs.unfolded.ai/studio).
+Unfolded Map Snippets ✂️ extension provides code templates 📑 you can use to create custom Unfolded Map 🗺️ html templates, and Python 🐍 scripts to manage data uploaded to [Unfolded Studio](https://docs.unfolded.ai/studio).
 
-See [unfolded-maps](https://github.com/RandomFractals/unfolded-maps) code repository for Observable JS and sample Python Notebooks 📚.
+See [unfolded-maps](https://github.com/RandomFractals/unfolded-maps) 🗺️ code repository for [Observable JS](https://github.com/RandomFractals/unfolded-maps#observable-js-notebooks-) and sample [Python Jupyter Notebooks](https://github.com/RandomFractals/unfolded-maps#jupyter-notebooks-) 📚.
 
 # Usage
 
