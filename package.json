@@ -10,15 +10,15 @@
     "Data Science",
     "Education",
     "Notebooks",
-  	"Snippets",
+    "Snippets",
     "Visualization"
   ],
 	"keywords": [
-		"unfolded",
-		"map",
-		"data",
-    "code",
-		"snippets"
+		"unfolded map sdk",
+		"unfolded data sdk",
+		"unfolded map snippets",
+		"unfolded data snippets",
+    "unfolded map html code snippets"
 	],
 	"icon": "resources/icons/unfolded-logo.png",
 	"publisher": "RandomFractalsInc",
