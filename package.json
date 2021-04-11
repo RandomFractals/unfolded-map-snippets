@@ -7,7 +7,11 @@
     "vscode": "^1.55.0"
   },
   "categories": [
-  	"Snippets"
+    "Data Science",
+    "Education",
+    "Notebooks",
+  	"Snippets",
+    "Visualization"
   ],
 	"keywords": [
 		"unfolded",
