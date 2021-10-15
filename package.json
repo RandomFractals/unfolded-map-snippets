@@ -4,7 +4,7 @@
   "description": "VSCode Snippets for Unfolded Map and Data SDKs",
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.55.0"
+    "vscode": "^1.61.1"
   },
   "categories": [
     "Data Science",
@@ -13,38 +13,38 @@
     "Snippets",
     "Visualization"
   ],
-	"keywords": [
-		"unfolded map sdk",
-		"unfolded data sdk",
-		"unfolded map snippets",
-		"unfolded data snippets",
+  "keywords": [
+    "unfolded map sdk",
+    "unfolded data sdk",
+    "unfolded map snippets",
+    "unfolded data snippets",
     "unfolded map html code snippets"
-	],
-	"icon": "resources/icons/unfolded-logo.png",
-	"publisher": "RandomFractalsInc",
-	"author": "Taras Novak",
-	"contributors": [
-		"Taras Novak"
-	],
-	"license": "Apache-2.0",
-	"readme": "README.md",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/RandomFractals/unfolded-map-snippets"
-	},
-	"bugs": "https://github.com/RandomFractals/unfolded-map-snippets/issues",
-	"homepage": "https://github.com/RandomFractals/unfolded-map-snippets/README.md",
-	"galleryBanner": {
-		"color": "#333",
-		"theme": "dark"
-	},
+  ],
+  "icon": "resources/icons/unfolded-logo.png",
+  "publisher": "RandomFractalsInc",
+  "author": "Taras Novak",
+  "contributors": [
+    "Taras Novak"
+  ],
+  "license": "Apache-2.0",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RandomFractals/unfolded-map-snippets"
+  },
+  "bugs": "https://github.com/RandomFractals/unfolded-map-snippets/issues",
+  "homepage": "https://github.com/RandomFractals/unfolded-map-snippets/README.md",
+  "galleryBanner": {
+    "color": "#333",
+    "theme": "dark"
+  },
   "contributes": {
     "snippets": [
-			{
+      {
         "language": "css",
         "path": "./snippets/css.code-snippets"
       },
-			{
+      {
         "language": "html",
         "path": "./snippets/html.code-snippets"
       },
@@ -56,7 +56,7 @@
         "language": "jsonc",
         "path": "./snippets/jsonc.code-snippets"
       },
-			{
+      {
         "language": "markdown",
         "path": "./snippets/markdown.code-snippets"
       },
@@ -75,6 +75,6 @@
     ]
   },
   "extensionDependencies": [
-		"RandomFractalsInc.snippets-viewer"
-	]
+    "RandomFractalsInc.snippets-viewer"
+  ]
 }
