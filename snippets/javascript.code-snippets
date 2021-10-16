@@ -3,7 +3,7 @@
     "prefix": "uf-import-map-sdk",
     "description": "Imports [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk/javascript-map-sdk).",
     "body": [
-      "import * as UnfoldedMapSDK from '@unfolded/map-sdk';",
+      "import {UnfoldedMap, setViewState} from '@unfolded/map-sdk';",
     ]
   },
   "Create Unfolded Map": {
