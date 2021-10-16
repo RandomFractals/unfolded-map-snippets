@@ -5,6 +5,7 @@
     "body": [
       "const map = new UnfoldedMap({",
       "\tmapUUID: '${1:mapId}',",
+      "\tappendToDocument: true,",
       "\tembed: true",
       "});"
     ]
@@ -42,7 +43,7 @@
   },
   "Set Unfolded Map Timeline Event Handlers": {
     "prefix": "uf-set-map-timeline-event-handlers",
-    "description": "Sets timeline interval and time change event handlers.",
+    "description": "Sets timeline interval and layer time change event handlers.",
     "body": [
       "map.setMapEventHandlers({",
       "\tonTimelineIntervalChange: (timelineInterval) => {",
@@ -70,11 +71,174 @@
       "});"
     ]
   },
+  "Remove Unfolded Map Timeline Event Handlers": {
+    "prefix": "uf-remove-map-timeline-event-handlers",
+    "description": "Removes timeline interval and layer time change event handlers.",
+    "body": [
+      "map.setMapEventHandlers({",
+      "\tonTimelineIntervalChange: null",
+      "\tonLayerTimelineTimeChange: null",
+      "});"
+    ]
+  },
   "Remove All Unfolded Map Event Handlers": {
     "prefix": "uf-remove-all-map-event-handlers",
     "description": "Removes all registered map event handlers.",
     "body": [
       "map.setMapEventHandlers(null);"
+    ]
+  },
+  "Remove Dataset": {
+    "prefix": "uf-remove-dataset",
+    "description": "Removes dataset from the map.",
+    "body": [
+      "map.removeDataset(''${1:datasetId}'')"
+    ]
+  },
+  "Refresh Map Data": {
+    "prefix": "uf-refresh-map-data",
+    "description": "Reloads the data displayed on the map.",
+    "body": [
+      "map.refreshMapData();"
+    ]
+  },
+  "Set Map View State": {
+    "prefix": "uf-set-map-view-state",
+    "description": "Positions the map view on a certain location based on the provided coordinates with a defined zoom level.",
+    "body": [
+      "map.setViewState({",
+      "\tlongitude: -74.006058,",
+      "\tlatitude: 40.712772,",
+      "\tzoom: ${1:zoomLevel}",
+      "});"
+    ]
+  },
+  "Get Map Layers": {
+    "prefix": "uf-get-map-layers",
+    "description": "Returns layer `label`, `id`, and `isVisible` properties for each layer on the map.\nMake sure to call `map.getLayers()` after the map successfully loads.",
+    "body": [
+      "map.getLayers().then(data => {",
+      "\tdata.layers.forEach(layer => {",
+      "\t\tconsole.log(layer);",
+      "\t});",
+      "});"
+    ]
+  },
+  "Log Map Layers on Load": {
+    "prefix": "uf-log-map-layers-on-map-load",
+    "description": "Logs map layer `label`, `id`, and `isVisible` properties for each layer on the map on map load.",
+    "body": [
+      "onLoad: () => {",
+      "\tmap.getLayers().then(layers => {",
+      "\t\tlayers.forEach(layer => {",
+      "\t\t\tconsole.log(`layer:', layer.label`);",
+      "\t\t\tconsole.log(`\tid:', layer.id`);",
+      "\t\t\tconsole.log(`\tisVisible:', layer.isVisible`);",
+      "\t\t});",
+      "}"
+    ]
+  },
+  "Add Points Layer": {
+    "prefix": "uf-add-points-map-layer",
+    "description": "Adds `point` layer to the map.",
+    "body": [
+      "map.addLayer({",
+      " id: 'pointLayer',",
+      " type: 'point',",
+      " config: {",
+      "   dataId: '${1:datasetId}',",
+      "   columns: {",
+      "     'lat': '${2:latitudeFieldName}',",
+      "     'lng': '${3:longitudeFieldName}',",
+      "   },",
+      "   isVisible: true,",
+      "   colorScale: 'quantize',",
+      "   colorField: {",
+      "     name: '${4:colorFieldName}',",
+      "     type: 'real'",
+      "   },",
+      "   visConfig: {",
+      "     colorRange: {",
+      "       colors: [",
+      "         '#440154','#472777','#3e4989','#30678d','#25828e',",
+      "         '#1e9d88','#35b778','#6dce58','#b5dd2b','#fde724'",
+      "       ]",
+      "     }",
+      " }",
+      "});"
+    ]
+  },
+  "Remove Map Layer": {
+    "prefix": "uf-remove-map-layer",
+    "description": "Remove a layer from the map.",
+    "body": [
+      "map.removeLayer('${1:layerId});"
+    ]
+  },
+  "Set Map Layer Visibility": {
+    "prefix": "uf-set-map-layer-visibility",
+    "description": "Shows or hides the layer for the provided `layerId`.",
+    "body": [
+      "map.setLayerVisibility('${1:layerId}, true);"
+    ]
+  },
+  "Set Data Filter": {
+    "prefix": "uf-set-data-filter",
+    "description": "Sets data filter value.",
+    "body": [
+      "map.setFilter({",
+      "\tid: '${1:filterId}'",
+      "\tdataId: '${2:datasetId}',",
+      "\tfield: '${3:fieldName}',",
+      "\tvalue: '${4:filterValue}'",
+      "});"
+    ]
+  },
+  "Set Map View Theme": {
+    "prefix": "uf-set-map-theme",
+    "description": "Changes map theme to `dark` or `light` based on the passed parameter.",
+    "body": [
+      "map.setTheme('light')"
+    ]
+  },
+  "Set Map Controls Visibility": {
+    "prefix": "uf-set-map-control-visibility",
+    "description": "Sets visibility for the built-in map controls: `mapLegend`, `toggle3d`, `splitMap`, and `mapDraw`.",
+    "body": [
+      "const mapConfig = {",
+      "\tpanelId: '${1:mapControlId}',",
+      "\tisVisible: false",
+      "});"
+    ]
+  },
+  "Set Map Timeline Config": {
+    "prefix": "uf-set-map-timeline-config",
+    "description": "Sets time filter timeline configuration that allows us to set timeline visibility, play/pause the animation, set the speed, set the time interval, change the time format and timezone.",
+    "body": [
+      "const startTime = new Date('2020.10.10').getTime();",
+      "const endTime = new Date('2020.10.18').getTime();",
+      "const timelineConfig = {",
+      " idx: 0,",
+      " currentTimeInterval: {",
+      "   startTime: startTime,",
+      "   endTime: endTime",
+      " },",
+      " timezone: 'America/Chicago', // from: https://momentjs.com/timezone",
+      " timeFormat: 'DD.MM.YYYY. HH:mm' // see: https://momentjs.com",
+      "};",
+      "",
+      "map.setTimelineConfig(timelineConfig).then(timelineData => {",
+      "\tconsole.log(timelineData);",
+      "});"
+    ]
+  },
+  "Get Map Timeline Info": {
+    "prefix": "uf-get-map-timeline-info",
+    "description": "Gets information object for the time filter timeline map control.",
+    "body": [
+      "map.getTimelineInfo(0).then(timelineData => {",
+      "\tconsole.log(timelineData);",
+      "});"
     ]
   },
 }
