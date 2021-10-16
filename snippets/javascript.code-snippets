@@ -1,4 +1,11 @@
 {
+  "Import Unfolded Map SDK": {
+    "prefix": "uf-import-map-sdk",
+    "description": "Imports [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk/javascript-map-sdk).",
+    "body": [
+      "import * as UnfoldedMapSDK from '@unfolded/map-sdk';",
+    ]
+  },
   "Create Unfolded Map": {
     "prefix": "uf-create-map",
     "description": "Creates a new UnfoldedMap.",
@@ -6,7 +13,9 @@
       "const map = new UnfoldedMap({",
       "\tmapUUID: '${1:mapId}', // use: https://www.uuidgenerator.net",
       "\tappendToDocument: true,",
-      "\tembed: true",
+      "\tembed: true,",
+      "\twidth: window.innerWidth,",
+      "\theight: window.innerHeight,",
       "});"
     ]
   },
