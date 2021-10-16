@@ -18,6 +18,16 @@
       "console.log(mapUrl);"
     ]
   },
+  "Add Dataset": {
+    "prefix": "uf-add-dataset",
+    "description": "Add a previously uploaded dataset with the specified id to the map. Datasets can be either uploaded via the [Unfolded Data SDK](https://docs.unfolded.ai/data-sdk) or manually added in (Unfolded Cloud)[http://studio.unfolded.ai].",
+    "body": [
+      "map.addDataset({",
+      "\tuuid: '${datasetId}'",
+      "\tlabel: '${datasetLabel}'",
+      "});"
+    ]
+  },
   "Set Map Event Handlers": {
     "prefix": "uf-set-map-event-handlers",
     "description": "Sets event handlers to receive notifications for the specified map events.",
@@ -242,4 +252,49 @@
       "});"
     ]
   },
+  "Set Map Layer Timeline Config": {
+    "prefix": "uf-set-map-layer-timeline-config",
+    "description": "Sets layer timeline configuration used with `Trips layer` that allows us to set timeline visibility, play/pause the animation, set the speed, set the current time, change the time format and timezone.",
+    "body": [
+      "const time = new Date('2020.10.10').getTime();",
+      "const timelineConfig = {",
+      "\tcurrentTime: time",
+      "\ttimezone: 'America/Chicago', // from: https://momentjs.com/timezone",
+      "\ttimeFormat: 'DD.MM.YYYY. HH:mm' // see: https://momentjs.com",
+      "};",
+      "",
+      "map.setLayerTimelineConfig(timelineConfig).then(timelineData => {",
+      "\tconsole.log(timelineData);",
+      "});"
+    ]
+  },
+  "Get Map Layer Timeline Info": {
+    "prefix": "uf-get-map-layer-timeline-info",
+    "description": "Gets information object for the layer timeline control used with `Trips layer`.",
+    "body": [
+      "map.getLayerTimelineInfo().then(timelineData => {",
+      "\tconsole.log(timelineData);",
+      "});"
+    ]
+  },
+  "Get Map Config": {
+    "prefix": "uf-get-map-config",
+    "description": "Gets map configuration object that contains `mapState`, `mapStyle`, and `visState` object properties.",
+    "body": [
+      "map.getLayers().then(mapConfig => {",
+      "\tconsole.log(mapConfig);",
+      "});"
+    ]
+  },
+  "Set Map Config": {
+    "prefix": "uf-set-map-config",
+    "description": "Gets map configuration with updated `mapState`, `mapStyle`, and `visState` object properties.",
+    "body": [
+      "map.setMapConfig({",
+      "\tmapState: {...}",
+      "\tmapStyle: {...}",
+      "\tvisState: {...}",
+      "});"
+    ]
+  }  
 }
