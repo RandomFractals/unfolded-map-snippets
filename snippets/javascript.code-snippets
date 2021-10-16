@@ -29,7 +29,7 @@
   },
   "Add Dataset": {
     "prefix": "uf-add-dataset",
-    "description": "Adds a previously uploaded dataset with the specified id to the map. Datasets can be either uploaded via the [Unfolded Data SDK](https://docs.unfolded.ai/data-sdk) or manually added in (Unfolded Cloud)[http://studio.unfolded.ai].",
+    "description": "Adds a previously uploaded dataset with the specified id to the map. Datasets can be either uploaded via the [Unfolded Data SDK](https://docs.unfolded.ai/data-sdk) or manually added in (Unfolded Cloud)[https://studio.unfolded.ai].",
     "body": [
       "map.addDataset({",
       "\tuuid: '${1:datasetId}'",
