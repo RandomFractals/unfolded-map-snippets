@@ -1,3 +1,80 @@
 {
-  // TODO
+  "Create Unfolded Map": {
+    "prefix": "uf-create-map",
+    "description": "Creates a new UnfoldedMap.",
+    "body": [
+      "const map = new UnfoldedMap({",
+      "\tmapUUID: '${1:mapId}',",
+      "\tembed: true",
+      "});"
+    ]
+  },
+  "Get Unfolded Map Url": {
+    "prefix": "uf-get-map-url",
+    "description": "Gets the url for a map created and published in Unfolded Studio.",
+    "body": [
+      "const mapUrl = UnfoldedMapSDK.getMapUrl('${1:mapId}');",
+      "console.log(mapUrl);"
+    ]
+  },
+  "Set Unfolded Map Event Handlers": {
+    "prefix": "uf-set-map-event-handlers",
+    "description": "Sets event handlers to receive notifications for the specified map events.",
+    "body": [
+      "map.setMapEventHandlers({",
+      "\tonLoad: () => {",
+      "\t\tconsole.log('map loaded!');",
+      "\t},",
+      "\tonClick: (clickEvent: ClickEvent) => {",
+      "\t\tconsole.log(clickEvent);",
+      "\t},",
+      "\tonHover: (hoverEvent: HoverEvent) => {",
+      "\t\tconsole.log(hoverEvent);",
+      "\t},",
+      "\tonGeometrySelection: (geometrySelectionEvent: GeometrySelectionEvent) => {",
+      "\t\tconsole.log(geometrySelectionEvent);",
+      "\t},",
+      "\tonFilter: (filterChangeEvent: FilterChangeEvent) => {",
+      "\t\tconsole.log(filterChangeEvent);",
+      "\t},",
+      "});"
+    ]
+  },
+  "Set Unfolded Map Timeline Event Handlers": {
+    "prefix": "uf-set-map-timeline-event-handlers",
+    "description": "Sets timeline interval and time change event handlers.",
+    "body": [
+      "map.setMapEventHandlers({",
+      "\tonTimelineIntervalChange: (timelineInterval) => {",
+      "\t\tconst startDateTime = new Date(timelineInterval[0]);",
+      "\t\tconst endDateTime = new Date(timelineInterval[1]);",
+      "\t\tconsole.log('start time: ' + startDateTime);",
+      "\t\tconsole.log('end time: ' + endDateTime);",
+      "\t},",
+      "\tonLayerTimelineTimeChange: (currentDateTimeUnix) => {",
+      "\t\tconst currentDateTime = new Date(currentDateTimeUnix);",
+      "\t\tconsole.log('current layer time: ' + currentDateTime);",
+      "\t},",
+      "});"
+    ]
+  },
+  "Remove Unfolded Map Event Handlers": {
+    "prefix": "uf-remove-map-event-handlers",
+    "description": "Removes specificied map event handlers.",
+    "body": [
+      "map.setMapEventHandlers({",
+      "\tonClick: null",
+      "\tonHover: null",
+      "\tonGeometrySelection: null",
+      "\tonFilter: null",
+      "});"
+    ]
+  },
+  "Remove All Unfolded Map Event Handlers": {
+    "prefix": "uf-remove-all-map-event-handlers",
+    "description": "Removes all registered map event handlers.",
+    "body": [
+      "map.setMapEventHandlers(null);"
+    ]
+  },
 }
