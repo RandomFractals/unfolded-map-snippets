@@ -1,7 +1,7 @@
 # unfolded-map-snippets
 [Unfolded](https://docs.unfolded.ai) Map and Data SDK VSCode snippets.
 
-![Unfolded Snippets in Snippets Viewer Tree View](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-snippets.png)
+![Unfolded Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-map-snippets.png)
 
 # Scope
 

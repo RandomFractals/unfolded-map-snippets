@@ -179,7 +179,7 @@
     "prefix": "uf-set-map-layer-visibility",
     "description": "Shows or hides the layer for the provided `layerId`.",
     "body": [
-      "map.setLayerVisibility('${1:layerId}, false);"
+      "map.setLayerVisibility('${1:layerId}', false);"
     ]
   },
   "Set Data Filter": {
