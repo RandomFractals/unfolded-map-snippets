@@ -4,7 +4,7 @@
     "description": "Creates a new UnfoldedMap.",
     "body": [
       "const map = new UnfoldedMap({",
-      "\tmapUUID: '${1:mapId}',",
+      "\tmapUUID: '${1:mapId}', // use: https://www.uuidgenerator.net",
       "\tappendToDocument: true,",
       "\tembed: true",
       "});"
@@ -12,13 +12,13 @@
   },
   "Get Unfolded Map Url": {
     "prefix": "uf-get-map-url",
-    "description": "Gets the url for a map created and published in Unfolded Studio.",
+    "description": "Gets the url for a map created and **published** in Unfolded Studio.",
     "body": [
       "const mapUrl = UnfoldedMapSDK.getMapUrl('${1:mapId}');",
       "console.log(mapUrl);"
     ]
   },
-  "Set Unfolded Map Event Handlers": {
+  "Set Map Event Handlers": {
     "prefix": "uf-set-map-event-handlers",
     "description": "Sets event handlers to receive notifications for the specified map events.",
     "body": [
@@ -41,7 +41,7 @@
       "});"
     ]
   },
-  "Set Unfolded Map Timeline Event Handlers": {
+  "Set Map Timeline Event Handlers": {
     "prefix": "uf-set-map-timeline-event-handlers",
     "description": "Sets timeline interval and layer time change event handlers.",
     "body": [
@@ -59,7 +59,7 @@
       "});"
     ]
   },
-  "Remove Unfolded Map Event Handlers": {
+  "Remove Map Event Handlers": {
     "prefix": "uf-remove-map-event-handlers",
     "description": "Removes specificied map event handlers.",
     "body": [
@@ -71,7 +71,7 @@
       "});"
     ]
   },
-  "Remove Unfolded Map Timeline Event Handlers": {
+  "Remove Map Timeline Event Handlers": {
     "prefix": "uf-remove-map-timeline-event-handlers",
     "description": "Removes timeline interval and layer time change event handlers.",
     "body": [
@@ -81,7 +81,7 @@
       "});"
     ]
   },
-  "Remove All Unfolded Map Event Handlers": {
+  "Remove All Map Event Handlers": {
     "prefix": "uf-remove-all-map-event-handlers",
     "description": "Removes all registered map event handlers.",
     "body": [
@@ -126,7 +126,7 @@
   },
   "Log Map Layers on Load": {
     "prefix": "uf-log-map-layers-on-map-load",
-    "description": "Logs map layer `label`, `id`, and `isVisible` properties for each layer on the map on map load.",
+    "description": "Logs map layer `label`, `id`, and `isVisible` properties for each layer on the loaded map.",
     "body": [
       "onLoad: () => {",
       "\tmap.getLayers().then(layers => {",
@@ -170,7 +170,7 @@
   },
   "Remove Map Layer": {
     "prefix": "uf-remove-map-layer",
-    "description": "Remove a layer from the map.",
+    "description": "Removes a layer from the map.",
     "body": [
       "map.removeLayer('${1:layerId});"
     ]
@@ -179,7 +179,7 @@
     "prefix": "uf-set-map-layer-visibility",
     "description": "Shows or hides the layer for the provided `layerId`.",
     "body": [
-      "map.setLayerVisibility('${1:layerId}, true);"
+      "map.setLayerVisibility('${1:layerId}, false);"
     ]
   },
   "Set Data Filter": {
@@ -190,7 +190,7 @@
       "\tid: '${1:filterId}'",
       "\tdataId: '${2:datasetId}',",
       "\tfield: '${3:fieldName}',",
-      "\tvalue: '${4:filterValue}'",
+      "\tvalue: ${4:filterValue}",
       "});"
     ]
   },
@@ -198,7 +198,7 @@
     "prefix": "uf-set-map-theme",
     "description": "Changes map theme to `dark` or `light` based on the passed parameter.",
     "body": [
-      "map.setTheme('light')"
+      "map.setTheme('light');"
     ]
   },
   "Set Map Controls Visibility": {
