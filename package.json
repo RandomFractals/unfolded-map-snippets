@@ -41,24 +41,8 @@
   "contributes": {
     "snippets": [
       {
-        "language": "css",
-        "path": "./snippets/css.code-snippets"
-      },
-      {
         "language": "html",
         "path": "./snippets/html.code-snippets"
-      },
-      {
-        "language": "json",
-        "path": "./snippets/json.code-snippets"
-      },
-      {
-        "language": "jsonc",
-        "path": "./snippets/jsonc.code-snippets"
-      },
-      {
-        "language": "markdown",
-        "path": "./snippets/markdown.code-snippets"
       },
       {
         "language": "javascript",
@@ -67,10 +51,6 @@
       {
         "language": "python",
         "path": "./snippets/python.code-snippets"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/typescript.code-snippets"
       }
     ]
   },
