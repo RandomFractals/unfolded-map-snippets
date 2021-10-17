@@ -1,3 +1,204 @@
 {
-  // TODO
+  "Import Unfolded Map SDK": {
+    "prefix": "uf-import-map-sdk",
+    "description": "Imports [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk/python-map-sdk).",
+    "body": [
+      "from unfolded.map_sdk import UnfoldedMap",
+    ]
+  },
+  "Create Unfolded Map": {
+    "prefix": "uf-create-map",
+    "description": "Creates a new UnfoldedMap.",
+    "body": [
+      "map = UnfoldedMap(",
+      "\tmapUUID='${1:map_id}', // use: https://www.uuidgenerator.net",
+      "\theight=640px",
+      ")"
+    ]
+  },
+  "Get Unfolded Map Url": {
+    "prefix": "uf-get-map-url",
+    "description": "Gets the url for a map created and **published** in Unfolded Studio.",
+    "body": [
+      "map_url = UnfoldedMap.get_map_url('${1:map_id}')",
+    ]
+  },
+  "Add Dataset": {
+    "prefix": "uf-add-dataset",
+    "description": "Adds a previously uploaded dataset with the specified id to the map. Datasets can be either uploaded via the [Unfolded Data SDK](https://docs.unfolded.ai/data-sdk) or manually added in [Unfolded Cloud](https://studio.unfolded.ai).",
+    "body": [
+      "map.addDataset({",
+      "\tuuid: '${1:dataset_id}'",
+      "\tlabel: '${2:dataset_label}'",
+      "})"
+    ]
+  },
+  "Remove Dataset": {
+    "prefix": "uf-remove-dataset",
+    "description": "Removes dataset from the map.",
+    "body": [
+      "map.remove_dataset('${1:dataset_id}')"
+    ]
+  },
+  "Refresh Map Data": {
+    "prefix": "uf-refresh-map-data",
+    "description": "Reloads the data displayed on the map.",
+    "body": [
+      "map.refresh_map_data()"
+    ]
+  },
+  "Set Map Event Handlers": {
+    "prefix": "uf-set-map-event-handlers",
+    "description": "Sets event handlers to receive notifications for the specified map events.",
+    "body": [ // TODO
+    ]
+  },
+  "Set Map Timeline Event Handlers": {
+    "prefix": "uf-set-map-timeline-event-handlers",
+    "description": "Sets timeline interval and layer time change event handlers.",
+    "body": [
+      "def on_timeline_interval_change(interval: List[int]):",
+      "\tstart_time = interval[0]",
+      "\tend_time = interval[1]",
+      "\t# output time interval here",
+      "",
+      "def on_layer_timeline_time_change(current_datetime_unix: int):",
+      "\t# output current time here",
+      "",
+      "map.set_map_event_handlers({",
+      "\t'on_timeline_interval_change': on_timeline_interval_change",
+      "\t'on_layer_timeline_time_change': on_layer_timeline_time_change",
+      "})"
+    ]
+  },
+  "Remove Map Event Handlers": {
+    "prefix": "uf-remove-map-event-handlers",
+    "description": "Removes specificied map event handlers.",
+    "body": [
+      "map.setMapEventHandlers({",
+      "\ton_click: None",
+      "\ton_over: None",
+      "\ton_geometry_selection: None",
+      "\ton_filter: None",
+      "})"
+    ]
+  },
+  "Remove Map Timeline Event Handlers": {
+    "prefix": "uf-remove-map-timeline-event-handlers",
+    "description": "Removes timeline interval and layer time change event handlers.",
+    "body": [
+      "map.setMapEventHandlers({",
+      "\ton_timeline_interval_change: None",
+      "\ton_layer_timeline_time_change: None",
+      "})"
+    ]
+  },
+  "Remove All Map Event Handlers": {
+    "prefix": "uf-remove-all-map-event-handlers",
+    "description": "Removes all registered map event handlers.",
+    "body": [
+      "map.set_map_event_handlers(None)"
+    ]
+  },
+  "Set Map View State": {
+    "prefix": "uf-set-map-view-state",
+    "description": "Positions the map view on a certain location based on the provided coordinates with a defined zoom level.",
+    "body": [
+      "map.set_view_state({",
+      "\tlongitude: -74.006058,",
+      "\tlatitude: 40.712772,",
+      "\tzoom: ${1:zoom_level}",
+      "})"
+    ]
+  },
+  "Get Map Layers": {
+    "prefix": "uf-get-map-layers",
+    "description": "Returns layer `label`, `id`, and `isVisible` properties for each layer on the map.",
+    "body": [
+      "layers = unfolded_map.get_layers()",
+      "layers.result()"
+    ]
+  },
+  "Add Points Map Layer": {
+    "prefix": "uf-add-points-map-layer",
+    "description": "Adds `point` layer to the map.",
+    "body": [
+      "map.add_layer({",
+      "\tid: 'pointLayer',",
+      "\ttype: 'point',",
+      "\tconfig: {",
+      "\t\tdata_id: '${1:dataset_id}',",
+      "\t\tcolumns: {",
+      "\t\t\t'lat': '${2:latitude_field_name}',",
+      "\t\t\t'lng': '${3:longitude_field_name}',",
+      "\t\t},",
+      "\t\tis_visible: true,",
+      "\t\tcolor_scale: 'quantize',",
+      "\t\tcolor_field: {",
+      "\t\t\tname: '${4:color_field_name}',",
+      "\t\t\ttype: 'real'",
+      "\t\t},",
+      "\t\tvis_config: {",
+      "\t\t\tcolorRange: {",
+      "\t\t\t\tcolors: [",
+      "\t\t\t\t\t'#440154','#472777','#3e4989','#30678d','#25828e',",
+      "\t\t\t\t\t'#1e9d88','#35b778','#6dce58','#b5dd2b','#fde724'",
+      "\t\t\t\t]",
+      "\t\t\t}",
+      "\t\t}",
+      "\t}",
+      "})"
+    ]
+  },
+  "Remove Map Layer": {
+    "prefix": "uf-remove-map-layer",
+    "description": "Removes a layer from the map.",
+    "body": [
+      "map.remove_layer('${1:layer_id})"
+    ]
+  },
+  "Set Map Layer Visibility": {
+    "prefix": "uf-set-map-layer-visibility",
+    "description": "Shows or hides a map layer with the specified `layerId`.",
+    "body": [
+      "map.set_layer_visibility(layer_id='${1:layer_id}', is_visible=True)"
+    ]
+  },
+  "Set Data Filter": {
+    "prefix": "uf-set-data-filter",
+    "description": "Sets data filter value.",
+    "body": [
+      "map.set_filter({",
+      "\tid: '${1:filter_id}'",
+      "\tfield: '${3:field_name}',",
+      "\tvalue: ${4:filter_value}",
+      "})"
+    ]
+  },
+  "Set Map View Theme": {
+    "prefix": "uf-set-map-theme",
+    "description": "Changes map theme to `dark` or `light` based on the passed parameter.",
+    "body": [
+      "map.set_theme('light')"
+    ]
+  },
+  "Get Map Config": {
+    "prefix": "uf-get-map-config",
+    "description": "Gets map configuration object that contains `mapState`, `mapStyle`, and `visState` object properties.",
+    "body": [
+      "map_config = unfolded_map.get_map_config()",
+      "map_config.result()"
+    ]
+  },
+  "Set Map Config": {
+    "prefix": "uf-set-map-config",
+    "description": "Gets map configuration with updated `mapState`, `mapStyle`, and `visState` object properties.",
+    "body": [
+      "map.set_map_config({",
+      "\tmapState: {...}",
+      "\tmapStyle: {...}",
+      "\tvisState: {...}",
+      "})"
+    ]
+  }  
 }
