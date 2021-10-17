@@ -27,7 +27,7 @@
     "prefix": "uf-add-dataset",
     "description": "Adds a previously uploaded dataset with the specified id to the map. Datasets can be either uploaded via the [Unfolded Data SDK](https://docs.unfolded.ai/data-sdk) or manually added in [Unfolded Cloud](https://studio.unfolded.ai).",
     "body": [
-      "map.addDataset({",
+      "map.add_dataset({",
       "\tuuid: '${1:dataset_id}'",
       "\tlabel: '${2:dataset_label}'",
       "})"
@@ -186,13 +186,13 @@
     "prefix": "uf-get-map-config",
     "description": "Gets map configuration object that contains `mapState`, `mapStyle`, and `visState` object properties.",
     "body": [
-      "map_config = unfolded_map.get_map_config()",
+      "map_config = map.get_map_config()",
       "map_config.result()"
     ]
   },
   "Set Map Config": {
     "prefix": "uf-set-map-config",
-    "description": "Gets map configuration with updated `mapState`, `mapStyle`, and `visState` object properties.",
+    "description": "Sets map configuration with updated `mapState`, `mapStyle`, and `visState` object properties.",
     "body": [
       "map.set_map_config({",
       "\tmapState: {...}",

@@ -297,7 +297,7 @@
   },
   "Set Map Config": {
     "prefix": "uf-set-map-config",
-    "description": "Gets map configuration with updated `mapState`, `mapStyle`, and `visState` object properties.",
+    "description": "Sets map configuration with updated `mapState`, `mapStyle`, and `visState` object properties.",
     "body": [
       "map.setMapConfig({",
       "\tmapState: {...}",
