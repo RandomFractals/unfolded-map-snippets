@@ -37,6 +37,20 @@
       "});"
     ]
   },
+  "Remove Dataset": {
+    "prefix": "uf-remove-dataset",
+    "description": "Removes dataset from the map.",
+    "body": [
+      "map.removeDataset('${1:datasetId}')"
+    ]
+  },
+  "Refresh Map Data": {
+    "prefix": "uf-refresh-map-data",
+    "description": "Reloads the data displayed on the map.",
+    "body": [
+      "map.refreshMapData();"
+    ]
+  },
   "Set Map Event Handlers": {
     "prefix": "uf-set-map-event-handlers",
     "description": "Sets event handlers to receive notifications for the specified map events.",
@@ -107,20 +121,6 @@
       "map.setMapEventHandlers(null);"
     ]
   },
-  "Remove Dataset": {
-    "prefix": "uf-remove-dataset",
-    "description": "Removes dataset from the map.",
-    "body": [
-      "map.removeDataset(''${1:datasetId}'')"
-    ]
-  },
-  "Refresh Map Data": {
-    "prefix": "uf-refresh-map-data",
-    "description": "Reloads the data displayed on the map.",
-    "body": [
-      "map.refreshMapData();"
-    ]
-  },
   "Set Map View State": {
     "prefix": "uf-set-map-view-state",
     "description": "Positions the map view on a certain location based on the provided coordinates with a defined zoom level.",
@@ -157,34 +157,34 @@
       "}"
     ]
   },
-  "Add Points Layer": {
+  "Add Points Map Layer": {
     "prefix": "uf-add-points-map-layer",
     "description": "Adds `point` layer to the map.",
     "body": [
       "map.addLayer({",
-      " id: 'pointLayer',",
-      " type: 'point',",
-      " config: {",
-      "   dataId: '${1:datasetId}',",
-      "   columns: {",
-      "     'lat': '${2:latitudeFieldName}',",
-      "     'lng': '${3:longitudeFieldName}',",
-      "   },",
-      "   isVisible: true,",
-      "   colorScale: 'quantize',",
-      "   colorField: {",
-      "     name: '${4:colorFieldName}',",
-      "     type: 'real'",
-      "   },",
-      "   visConfig: {",
-      "     colorRange: {",
-      "       colors: [",
-      "         '#440154','#472777','#3e4989','#30678d','#25828e',",
-      "         '#1e9d88','#35b778','#6dce58','#b5dd2b','#fde724'",
-      "       ]",
-      "     }",
-      "   }",
-      " }",
+      "\tid: 'pointLayer',",
+      "\ttype: 'point',",
+      "\tconfig: {",
+      "\t\tdataId: '${1:datasetId}',",
+      "\t\tcolumns: {",
+      "\t\t\t'lat': '${2:latitudeFieldName}',",
+      "\t\t\t'lng': '${3:longitudeFieldName}',",
+      "\t\t},",
+      "\t\tisVisible: true,",
+      "\t\tcolorScale: 'quantize',",
+      "\t\tcolorField: {",
+      "\t\t\tname: '${4:colorFieldName}',",
+      "\t\t\ttype: 'real'",
+      "\t\t},",
+      "\t\tvisConfig: {",
+      "\t\t\tcolorRange: {",
+      "\t\t\t\tcolors: [",
+      "\t\t\t\t\t'#440154','#472777','#3e4989','#30678d','#25828e',",
+      "\t\t\t\t\t'#1e9d88','#35b778','#6dce58','#b5dd2b','#fde724'",
+      "\t\t\t\t]",
+      "\t\t\t}",
+      "\t\t}",
+      "\t}",
       "});"
     ]
   },
@@ -197,7 +197,7 @@
   },
   "Set Map Layer Visibility": {
     "prefix": "uf-set-map-layer-visibility",
-    "description": "Shows or hides the layer for the provided `layerId`.",
+    "description": "Shows or hides a map layer with the specified `layerId`.",
     "body": [
       "map.setLayerVisibility('${1:layerId}', false);"
     ]
@@ -238,13 +238,13 @@
       "const startTime = new Date('2020.10.10').getTime();",
       "const endTime = new Date('2020.10.18').getTime();",
       "const timelineConfig = {",
-      " idx: 0,",
-      " currentTimeInterval: {",
-      "   startTime: startTime,",
-      "   endTime: endTime",
-      " },",
-      " timezone: 'America/Chicago', // from: https://momentjs.com/timezone",
-      " timeFormat: 'DD.MM.YYYY. HH:mm' // see: https://momentjs.com",
+      "\tidx: 0,",
+      "\tcurrentTimeInterval: {",
+      "\t\tstartTime: startTime,",
+      "\t\tendTime: endTime",
+      "\t},",
+      "\ttimezone: 'America/Chicago', // from: https://momentjs.com/timezone",
+      "\ttimeFormat: 'DD.MM.YYYY. HH:mm' // see: https://momentjs.com",
       "};",
       "",
       "map.setTimelineConfig(timelineConfig).then(timelineData => {",
