@@ -1,5 +1,7 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+
 docs/images/**
+templates/**
 tests/**
