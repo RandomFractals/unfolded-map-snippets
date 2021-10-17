@@ -5,6 +5,8 @@
 
 ![Unfolded Py Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-map-py-snippets.png)
 
+![Unfolded Map Html Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-map-html-snippets.png)
+
 # Scope
 
 This extension provides custom [HTML](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/html.code-snippets), [CSS](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/css.code-snippets), [JavaScript](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/javascript.code-snippets) and [Python](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/snippets/python.code-snippets) 🐍 code snippets ✂️ for [Unfolded Map](https://docs.unfolded.ai/map-sdk) and [Data SDK](https://docs.unfolded.ai/data-sdk).
