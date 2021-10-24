@@ -7,8 +7,7 @@
       "type": "npm",
       "script": "dev",
       "problemMatcher": [
-        "$tsc-watch",
-        "$ts-checker-webpack-watch"
+        "$tsc-watch"
       ],
       "isBackground": true,
       "presentation": {
@@ -23,8 +22,7 @@
       "type": "npm",
       "script": "watch",
       "problemMatcher": [
-        "$tsc-watch",
-        "$ts-checker-webpack-watch"
+        "$tsc-watch"
       ],
       "isBackground": true,
       "presentation": {
@@ -36,8 +34,7 @@
       "type": "npm",
       "script": "compile",
       "problemMatcher": [
-        "$tsc",
-        "$ts-checker-webpack"
+        "$tsc"
       ],
       "group": "build"
     }
