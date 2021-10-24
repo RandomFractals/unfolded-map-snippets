@@ -2,7 +2,7 @@
   "name": "unfolded-snippets",
   "displayName": "Unfolded Snippets",
   "description": "VSCode Snippets for Unfolded Map and Data SDKs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.61.1"
   },
@@ -18,7 +18,8 @@
     "unfolded data sdk",
     "unfolded map snippets",
     "unfolded data snippets",
-    "unfolded map html code snippets"
+    "unfolded map html code snippets",
+    "unfolded map notebooks"
   ],
   "icon": "resources/icons/unfolded-logo.png",
   "publisher": "RandomFractalsInc",
