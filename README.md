@@ -309,8 +309,7 @@ map.setMapConfig({
 
 ## Python Snippets
 
-<table><tr><th>Prefix</th><th>Body</th><th>Description</th></tr><tr><td>uf-map-html-template</td><td>
-<td>uf-import-map-sdk</td><td>
+<table><tr><th>Prefix</th><th>Body</th><th>Description</th></tr><tr><td>uf-import-map-sdk</td><td>
 
 ```python
 from unfolded.map_sdk import UnfoldedMap
