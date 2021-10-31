@@ -2,7 +2,7 @@
 export const notebookExamples: Array<any> = [
 	{
 		name: 'Introduction to Unfolded Map SDK',
-		file: './notebooks/unfolded-map-sdk-intro.ipynb',
+		file: './notebooks/Jupyter/Introduction.ipynb',
 		type: 'Python Jupyter Notebook',
 	},
 ];
