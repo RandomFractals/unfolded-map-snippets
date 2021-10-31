@@ -5,5 +5,8 @@
     "dbaeumer.vscode-eslint",
     "donjayamanne.typescript-notebook",
     "RandomFractalsInc.js-notebook-inspector",
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "ms-python.gather"
   ]
 }
