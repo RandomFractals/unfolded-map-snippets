@@ -32,4 +32,6 @@ The official [Unfolded Jupyter Examples](https://docs.unfolded.ai/jupyter/exampl
 | --- | --- |
 | [Introduction.ipynb](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/notebooks/Jupyter/Introduction.ipynb) | Create an Unfolded map, add a dataset, and set the map view. |
 | [Local Maps.ipynb](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/notebooks/Jupyter/Local%20Maps.ipynb) | Use local Unfolded maps to visualize [`pandas`](https://pandas.pydata.org) [`DataFrames`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html), [`GeoJSON`](https://geojson.org), [`CSV`](https://en.wikipedia.org/wiki/Comma-separated_values) data and strings. |
+| [Published Maps.ipynb](https://github.com/RandomFractals/unfolded-map-snippets/blob/main/notebooks/Jupyter/Published%20Maps.ipynb) | Load published Unfolded maps in Python Jupyter Notebooks. |
+
 
