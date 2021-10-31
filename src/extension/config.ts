@@ -5,4 +5,9 @@ export const notebookExamples: Array<any> = [
 		file: './notebooks/Jupyter/Introduction.ipynb',
 		type: 'Python Jupyter Notebook',
 	},
+	{
+		name: 'Local Unfolded Maps',
+		file: './notebooks/Jupyter/Local Maps.ipynb',
+		type: 'Python Jupyter Notebook',
+	},
 ];
