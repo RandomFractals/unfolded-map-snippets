@@ -1,8 +1,14 @@
 # Jupyter Notebooks
 
-Collection of Jupyter notebooks to illustrate the use of [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk).
+Collection of [Jupyter Notebooks](https://jupyter.org) to illustrate the use of [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk).
 
 ## Installation
+
+[Visual Studio Code](https://code.visualstudio.com) provides basic notebook support for [language kernels](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) that are supported in Jupyter Notebooks today. Many language kernels will work with no modification. To enable advanced features, modifications may be needed in the VS Code language extensions.
+
+In order to use Unfolded Map SDK Jupyter Notebook Examples, you need to install [Mircosoft Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) vscode extension. The Jupyter VSCode extension includes the Jupyter Keymaps and the Jupyter Notebook Renderers extensions by default. The Jupyter Keymaps extension provides Jupyter-consistent keymaps and the Jupyter Notebook Rendereres extension provides renderers for mime types such as latex, plotly, vega and the like. Both of these extensions can be disabled or uninstalled.
+
+VSCode has public [Notebook API](https://code.visualstudio.com/api/extension-guides/notebook) that describes native notebooks support, and interfaces for running Jupyter Notebooks in vscode, and rendering rich cell outputs.
 
 To use Unfolded Map and Data SDK with Python in Jupyter notebooks, first install them using `pip`:
 
