@@ -1,0 +1,39 @@
+
+# Unfolded Map SDK
+
+Simple example using [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk)
+
+### 1. Import Unfolded Map SDK Module
+
+```
+mapSDK = import('https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/index.js?module')
+```
+
+### 2. Create Unfolded Map Instance
+
+```
+unfoldedMap = mapSDK.createMap({
+    mapUUID: '31b96f3a-92a0-4146-b6c2-c1c48fb128e5',
+    embed: false,
+    appendToDocument: false,
+    width: width,
+    height: 600,
+  });
+```
+
+### 3. Set Map View State
+
+```
+viewof map = {
+  unfoldedMap.setMapEventHandlers({
+    onLoad: () => {
+      unfoldedMap.setViewState({
+        longitude: -96.4247,
+        latitude: 31.51073,
+        zoom: 1
+      });
+    }
+  });
+  yield unfoldedMap.iframe;
+}
+```
