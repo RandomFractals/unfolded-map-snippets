@@ -68,7 +68,9 @@
     ]
   },
   "extensionDependencies": [
-    "RandomFractalsInc.snippets-viewer"
+    "RandomFractalsInc.snippets-viewer",
+    "RandomFractalsInc.js-notebook-inspector",
+    "GordonSmith.observable-js"
   ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
