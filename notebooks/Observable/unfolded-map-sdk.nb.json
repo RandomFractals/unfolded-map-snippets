@@ -1,0 +1,124 @@
+{
+  "id": "3c2b05bd9a1b89e8",
+  "slug": "unfolded-map-sdk",
+  "trashed": false,
+  "description": "",
+  "likes": 2,
+  "publish_level": "public",
+  "forks": 1,
+  "fork_of": null,
+  "update_time": "2021-11-04T19:35:44.171Z",
+  "publish_time": "2021-01-12T18:16:43.062Z",
+  "publish_version": 132,
+  "latest_version": 132,
+  "thumbnail": "18f12e527aebde5adfddae8528ef584896c44106a18809af6038453dba7c6812",
+  "default_thumbnail": "18f12e527aebde5adfddae8528ef584896c44106a18809af6038453dba7c6812",
+  "roles": [],
+  "sharing": null,
+  "owner": {
+    "id": "17b72db66175b428",
+    "github_login": "RandomFractals",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/656833?v=4",
+    "login": "randomfractals",
+    "name": "Taras Novak",
+    "bio": "I map 🌐 & graph  📈 data 🈸 ",
+    "home_url": "https://www.linkedin.com/in/tarasnovak",
+    "type": "individual"
+  },
+  "creator": {
+    "id": "17b72db66175b428",
+    "github_login": "RandomFractals",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/656833?v=4",
+    "login": "randomfractals",
+    "name": "Taras Novak",
+    "bio": "I map 🌐 & graph  📈 data 🈸 ",
+    "home_url": "https://www.linkedin.com/in/tarasnovak"
+  },
+  "collections": [
+    {
+      "id": "d11d6c47274b0884",
+      "type": "public",
+      "slug": "unfolded",
+      "title": "Unfolded",
+      "description": "Unfolded Maps and Notebooks",
+      "update_time": "2021-01-13T00:38:10.499Z",
+      "pinned": false,
+      "ordered": true,
+      "custom_thumbnail": null,
+      "thumbnail": "c0e84bfe6d165e236427953dc1024869b2137f6ab77888e3d59caf45caaf9c4c",
+      "listing_count": 4,
+      "parent_collection_count": 0,
+      "owner": {
+        "id": "17b72db66175b428",
+        "github_login": "RandomFractals",
+        "avatar_url": "https://avatars1.githubusercontent.com/u/656833?v=4",
+        "login": "randomfractals",
+        "name": "Taras Novak",
+        "bio": "I map 🌐 & graph  📈 data 🈸 ",
+        "home_url": "https://www.linkedin.com/in/tarasnovak",
+        "type": "individual"
+      }
+    }
+  ],
+  "files": [],
+  "comments": [],
+  "commenting_lock": null,
+  "suggestion_from": null,
+  "suggestions_to": [],
+  "version": 132,
+  "title": "Unfolded Map SDK",
+  "license": null,
+  "copyright": "",
+  "nodes": [
+    {
+      "id": 0,
+      "value": "md`# Unfolded Map SDK\n\nSimple example using [Unfolded Map SDK](https://docs.unfolded.ai/map-sdk)\n`",
+      "pinned": false,
+      "mode": "js",
+      "data": null
+    },
+    {
+      "id": 23,
+      "value": "md`### 1. Import Unfolded Map SDK Module`",
+      "pinned": false,
+      "mode": "js",
+      "data": null
+    },
+    {
+      "id": 4,
+      "value": "mapSDK = import('https://unpkg.com/@unfolded/map-sdk@0.3.1/dist/index.js?module')",
+      "pinned": true,
+      "mode": "js",
+      "data": null
+    },
+    {
+      "id": 28,
+      "value": "md`### 2. Create Unfolded Map Instance`",
+      "pinned": false,
+      "mode": "js",
+      "data": null
+    },
+    {
+      "id": 114,
+      "value": "unfoldedMap = mapSDK.createMap({\n    mapUUID: '31b96f3a-92a0-4146-b6c2-c1c48fb128e5',\n    embed: false,\n    appendToDocument: false,\n    width: width,\n    height: 600,\n  });",
+      "pinned": true,
+      "mode": "js",
+      "data": null
+    },
+    {
+      "id": 123,
+      "value": "md`### 3. Display Unfolded Map`",
+      "pinned": false,
+      "mode": "js",
+      "data": null
+    },
+    {
+      "id": 6,
+      "value": "viewof map = {\n  unfoldedMap.setMapEventHandlers({\n    onLoad: () => {\n      unfoldedMap.setViewState({\n        longitude: -96.4247,\n        latitude: 31.51073,\n        zoom: 1\n      });\n    }\n  });\n  yield unfoldedMap.iframe;\n}",
+      "pinned": true,
+      "mode": "js",
+      "data": null
+    }
+  ],
+  "resolutions": []
+}
