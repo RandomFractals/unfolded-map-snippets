@@ -12,7 +12,7 @@ See [unfolded-maps](https://github.com/RandomFractals/unfolded-maps) 🗺️ cod
 
 Use `> Unfolded Snippets` loaded from this extension in the Snippets Viewer Tree View ⎇ to streamline your custom Unfolded map creation and data integration development.
 
-![Unfolded JS Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-map-snippets.png)
+![Unfolded JS Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-maps/main/docs/images/unfolded-map-snippets.png)
 
 <!-- SNIPPETS_START -->
 ## JavaScript Snippets
@@ -301,11 +301,11 @@ map.setMapConfig({
 
 </td><td>Sets map configuration with updated `mapState`, `mapStyle`, and `visState` object properties.</td></tr><tr></table>
 
-<!-- SNIPPETS_END --> 
+<!-- SNIPPETS_END -->
 
 # Unfolded Python Snippets
 
-![Unfolded Py Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-map-py-snippets.png)
+![Unfolded Py Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-maps/main/docs/images/unfolded-map-py-snippets.png)
 
 ## Python Snippets
 
@@ -496,7 +496,7 @@ map.set_map_config({
 
 # Unfolded Html Snippets
 
-![Unfolded Map Html Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-map-snippets/main/docs/images/unfolded-map-html-snippets.png)
+![Unfolded Map Html Snippets](https://raw.githubusercontent.com/RandomFractals/unfolded-maps/main/docs/images/unfolded-map-html-snippets.png)
 
 ## Html Snippets
 
